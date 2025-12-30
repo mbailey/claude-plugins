@@ -1,0 +1,20 @@
+{
+  "name": "failmode",
+  "description": "Mike Bailey's curated Claude Code plugins",
+  "version": "1.0.0",
+  "plugins": [],
+  "external_plugins": [
+    {
+      "name": "show-and-tell",
+      "description": "Display agent screens in browser and Neovim",
+      "source": "url",
+      "url": "https://github.com/mbailey/show-and-tell"
+    },
+    {
+      "name": "voicemode",
+      "description": "Voice-based interaction for Claude Code",
+      "source": "url",
+      "url": "https://github.com/mbailey/voicemode"
+    }
+  ]
+}
