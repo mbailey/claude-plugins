@@ -1,8 +1,8 @@
 {
-  "name": "voicemode",
+  "name": "mbailey",
   "owner": {
     "name": "Mike Bailey",
-    "email": "mike@getfailmode.com"
+    "email": "mike@failmode.com"
   },
   "metadata": {
     "description": "Mike Bailey's Claude Code plugins",
@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "show-and-tell",
-      "description": "Display agent screens in browser and Neovim",
+      "description": "Let Claude show you files and web pages (tmux, neovim).",
       "source": {
         "source": "github",
         "repo": "mbailey/show-and-tell"
