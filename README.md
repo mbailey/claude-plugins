@@ -2,29 +2,24 @@
 
 Mike Bailey's curated collection of Claude Code plugins.
 
-## Marketplace URL
+## Installation
 
-```
-https://plugins.failmode.com
+```bash
+/plugin marketplace add mbailey/claude-plugins
 ```
 
 ## Available Plugins
-
-### External Plugins
 
 | Plugin | Description |
 |--------|-------------|
 | [show-and-tell](https://github.com/mbailey/show-and-tell) | Display agent screens in browser and Neovim |
 | [voicemode](https://github.com/mbailey/voicemode) | Voice-based interaction for Claude Code |
 
-## Installation
+## Install a Plugin
 
-In Claude Code:
+After adding the marketplace:
+
+```bash
+/plugin install show-and-tell@failmode
+/plugin install voicemode@failmode
 ```
-/plugins marketplace add https://plugins.failmode.com
-```
-
-## Why failmode.com?
-
-Using a domain I control rather than relying on GitHub for distribution.
-Skills > MCP for local tools.
