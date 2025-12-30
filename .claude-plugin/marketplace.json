@@ -1,11 +1,11 @@
 {
-  "name": "failmode",
+  "name": "voicemode",
   "owner": {
     "name": "Mike Bailey",
-    "email": "m@mbailey.cc"
+    "email": "mike@getfailmode.com"
   },
   "metadata": {
-    "description": "Mike Bailey's curated Claude Code plugins",
+    "description": "Mike Bailey's Claude Code plugins",
     "version": "1.0.0"
   },
   "plugins": [
