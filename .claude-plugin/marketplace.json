@@ -13,16 +13,16 @@
       "name": "show-and-tell",
       "description": "Let Claude show you files and web pages (tmux, neovim).",
       "source": {
-        "source": "github",
-        "repo": "mbailey/show-and-tell"
+        "source": "url",
+        "url": "https://github.com/mbailey/show-and-tell.git"
       }
     },
     {
       "name": "voicemode",
       "description": "Voice-based interaction for Claude Code",
       "source": {
-        "source": "github",
-        "repo": "mbailey/voicemode"
+        "source": "url",
+        "url": "https://github.com/mbailey/voicemode.git"
       }
     }
   ]
