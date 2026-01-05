@@ -1,6 +1,6 @@
-# Failmode Claude Code Plugins
+# Claude Code Plugins
 
-Mike Bailey's curated collection of Claude Code plugins.
+Mike Bailey's Claude Code plugins.
 
 ## Installation
 
@@ -10,16 +10,18 @@ Mike Bailey's curated collection of Claude Code plugins.
 
 ## Available Plugins
 
+
 | Plugin | Description |
 |--------|-------------|
 | [show-and-tell](https://github.com/mbailey/show-and-tell) | Display agent screens in browser and Neovim |
 | [voicemode](https://github.com/mbailey/voicemode) | Voice-based interaction for Claude Code |
+
 
 ## Install a Plugin
 
 After adding the marketplace:
 
 ```bash
-/plugin install show-and-tell@failmode
-/plugin install voicemode@failmode
+/plugin install show-and-tell@mbailey
+/plugin install voicemode@mbailey
 ```
