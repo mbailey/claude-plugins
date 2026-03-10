@@ -10,11 +10,11 @@
   },
   "plugins": [
     {
-      "name": "show-and-tell",
+      "name": "show-me",
       "description": "Let Claude show you files and web pages (tmux, neovim).",
       "source": {
         "source": "url",
-        "url": "https://github.com/mbailey/show-and-tell.git"
+        "url": "https://github.com/mbailey/show-me.git"
       }
     },
     {
