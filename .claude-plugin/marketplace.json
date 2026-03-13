@@ -5,16 +5,16 @@
     "email": "mike@failmode.com"
   },
   "metadata": {
-    "description": "Mike Bailey's Claude Code plugins",
+    "description": "Mike Bailey's agent plugins",
     "version": "1.0.5"
   },
   "plugins": [
     {
-      "name": "show-and-tell",
+      "name": "show-me",
       "description": "Let Claude show you files and web pages (tmux, neovim).",
       "source": {
         "source": "url",
-        "url": "https://github.com/mbailey/show-and-tell.git"
+        "url": "https://github.com/mbailey/show-me.git"
       }
     },
     {
