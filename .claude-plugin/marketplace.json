@@ -24,6 +24,14 @@
         "source": "url",
         "url": "https://github.com/mbailey/voicemode.git"
       }
+    },
+    {
+      "name": "voicemode-channel",
+      "description": "VoiceMode Connect channel plugin -- receive voice calls from your phone or browser",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mbailey/voicemode-channel.git"
+      }
     }
   ]
 }
