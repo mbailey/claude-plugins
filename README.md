@@ -1,21 +1,19 @@
-# Agent Plugins
+# Claude Code Plugins
 
-Mike Bailey's agent plugins.
+Mike Bailey's Claude Code plugins.
 
 ## Installation
 
 ```bash
-/plugin marketplace add mbailey/agent-plugins
+/plugin marketplace add mbailey/claude-plugins
 ```
 
 ## Available Plugins
 
-
-| Plugin | Description |
-|--------|-------------|
-| [show-me](https://github.com/mbailey/show-me) | Let Claude show you files and web pages (tmux, neovim) |
-| [voicemode](https://github.com/mbailey/voicemode) | Voice-based interaction for Claude Code |
-
+| Plugin                                            | Description                                            |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| [show-me](https://github.com/mbailey/show-me)     | Let Claude show you files and web pages (tmux, neovim) |
+| [voicemode](https://github.com/mbailey/voicemode) | Voice-based interaction for Claude Code                |
 
 ## Install a Plugin
 
