@@ -1,11 +1,19 @@
-# Mike Bailey Skills Marketplace
+# Mike Bailey's Skills Marketplace
 
-Mike Bailey's AI Agent Skills.
+A Claude Code plugin marketplace with skills to somewhat improve things.
 
 ## Installation
 
-```bash
-/plugin marketplace add mbailey/claude-plugins
+### Claude Code Marketplace
+
+```
+/plugin marketplace add mbailey/skills
+```
+
+### Browse and Install Plugins
+
+```
+/plugin menu
 ```
 
 ## Available Plugins
@@ -21,5 +29,4 @@ After adding the marketplace:
 
 ```bash
 /plugin install show-me@mbailey
-/plugin install voicemode@mbailey
 ```
