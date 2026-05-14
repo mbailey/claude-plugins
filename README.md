@@ -1,6 +1,6 @@
-# Claude Code Plugins
+# Agent Skills
 
-Mike Bailey's Claude Code plugins.
+Mike Bailey's AI Agent Skills.
 
 ## Installation
 
