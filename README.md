@@ -1,4 +1,4 @@
-# Agent Skills
+# Mike Bailey Skills Marketplace
 
 Mike Bailey's AI Agent Skills.
 
