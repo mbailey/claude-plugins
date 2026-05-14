@@ -12,7 +12,7 @@ claude plugin marketplace add mbailey/skills
 
 ### Install a Plugin
 
-```s
+```
 claude plugin install --scope user show-me@mbailey
 ```
 
