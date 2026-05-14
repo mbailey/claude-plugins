@@ -4,16 +4,22 @@ A Claude Code plugin marketplace with skills to somewhat improve things.
 
 ## Installation
 
-### Claude Code Marketplace
+### Add Claude Code Marketplace
 
 ```
-/plugin marketplace add mbailey/skills
+claude plugin marketplace add mbailey/skills
+```
+
+### Install a Plugin
+
+```s
+claude plugin install --scope user show-me@mbailey
 ```
 
 ### Browse and Install Plugins
 
 ```
-/plugin menu
+claude /plugin
 ```
 
 ## Available Plugins
@@ -21,12 +27,4 @@ A Claude Code plugin marketplace with skills to somewhat improve things.
 | Plugin                                            | Description                                            |
 | ------------------------------------------------- | ------------------------------------------------------ |
 | [show-me](https://github.com/mbailey/show-me)     | Let Claude show you files and web pages (tmux, neovim) |
-| [voicemode](https://github.com/mbailey/voicemode) | Voice-based interaction for Claude Code                |
-
-## Install a Plugin
-
-After adding the marketplace:
-
-```bash
-/plugin install show-me@mbailey
-```
+| [VoiceMode](https://github.com/mbailey/voicemode) | Natrual conversations with Claude Code                 |
