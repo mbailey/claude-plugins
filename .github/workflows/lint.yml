@@ -1,0 +1,34 @@
+name: Lint
+
+# Adapted from trailofbits/skills .github/workflows/lint.yml.
+# Differences from the ToB template:
+#   - Triggers target `master` (mbailey/skills' default branch), not `main`.
+#   - Only the pre-commit job is kept; ToB's `bats` and `python-tests` jobs
+#     are omitted -- this repo has no plugins/**/*.bats or test_*.py yet.
+#     Re-add them when bundled skills ship tests.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pre-commit:
+    name: Pre-commit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: "3.13"
+      - uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd  # v3.0.1
