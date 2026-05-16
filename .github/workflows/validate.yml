@@ -14,6 +14,13 @@ name: Validate
 #     cross-check). See .github/scripts/validate_marketplace.py.
 #   - ToB's "Validate Codex skill mappings" step omitted: .codex dual-
 #     distribution is deferred (see SKF-8 README Notes).
+#   - Added a non-blocking `security-scan` job running the vendored
+#     scripts/scan_plugin.py (from trailofbits/skills-curated). It is
+#     INFORMATIONAL ONLY (continue-on-error + never exits non-zero): there are
+#     no bundled plugin dirs yet, so it self-skips when plugins/ is absent and
+#     activates automatically once skills are bundled under plugins/. ToB's
+#     full security-scan.yml (PR-comment bot, label triggers) is intentionally
+#     not adopted yet -- overkill until there is something to scan.
 
 on:
   push:
@@ -105,3 +112,33 @@ jobs:
 
       - name: Validate marketplace.json
         run: python3 .github/scripts/validate_marketplace.py
+
+  security-scan:
+    name: Plugin security scan (informational)
+    runs-on: ubuntu-latest
+    # Informational only -- this job must never gate merges. There are no
+    # bundled plugin dirs yet; the scanner self-skips when plugins/ is absent
+    # and starts producing output once skills are bundled under plugins/.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@eac588ad8def6316056a12d4907a9d4d84ff7a3b  # v7.3.0
+
+      - name: Run vendored scan_plugin.py (non-blocking)
+        run: |
+          set +e
+          if [ -d plugins ]; then
+            echo "Scanning plugins/ (informational -- does NOT gate CI)"
+            uv run scripts/scan_plugin.py plugins/
+            echo "scan_plugin.py exit code: $? (0 clean / 2 BLOCK / 3 WARN)"
+          else
+            echo "No plugins/ directory yet -- nothing to scan."
+            echo "The scanner is vendored at scripts/scan_plugin.py and this"
+            echo "job activates automatically once bundled plugin dirs land"
+            echo "under plugins/. Run it locally with:"
+            echo "  uv run scripts/scan_plugin.py <plugin-dir>"
+          fi
+          exit 0
