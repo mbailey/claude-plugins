@@ -1,0 +1,25 @@
+# Dependabot config — adapted from trailofbits/skills .github/dependabot.yml.
+# pip ecosystem at / is harmless while there are no requirements; per-skill
+# pip directories (e.g. /plugins/<name>/scripts) get added as Python skills
+# are bundled into this marketplace.
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      all:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 7
+    groups:
+      all:
+        patterns: ["*"]
